@@ -1,6 +1,5 @@
 body {
     text-align: center;
-
 }
 .checkText {
     padding-right: 25px;
@@ -21,4 +20,36 @@ table {
 }
 label {
   padding-bottom: 10px;
+}
+
+.version {
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: center;
+
+	font-size: 14px;
+	padding: .2em 0;
+  color: #8e8e93;
+}
+.version:before,
+.version:after {
+	content: "";
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	height: 1px;
+
+	vertical-align: middle;
+	background: #000;
+	background-clip: content-box;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+.version:before {
+	left: -.5em;
+	margin: 0 0 0 -50%;
+}
+.version:after {
+	left: .5em;
+	margin: 0 -50% 0 0;
 }
