@@ -24,12 +24,22 @@ function configureString() {
 
 function generate() {
     let lenght = sliderV.value
+
+    if (lenght > 50) {
+      sliderV.value = lenght = 50
+    }
+    else if (lenght < 3) {
+      sliderV.value = lenght = 3
+    }
+    else {
+      sliderV.value = lenght = slider.value
+    }
+
     let alph = configureString()
 
     let res = ''
     for (let i = 0; i < lenght; i += 1) {
-        res += (alph.charAt(Math.floor(Math.random() *
-         (alph.length - 0 + 1))))
+        res += (alph.charAt(Math.floor(Math.random() * (alph.length))))
     }
 
     document.getElementById('Password').innerHTML = res // output generated string
